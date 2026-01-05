@@ -47,7 +47,7 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 Author
 Dmitry Kandrykinski
 
-GitHub: @Swimmov
-LinkedIn: Your LinkedIn
-Email: d.kandrykinski@gmail.com
+   GitHub: @Swimmov
+   LinkedIn: Your LinkedIn
+   Email: d.kandrykinski@gmail.com
 
