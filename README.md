@@ -11,7 +11,7 @@ A production-ready LSTM framework validated on stock price forecasting, applicab
     * Monte Carlo Sorted - Random folds, data-dependent splits (directional accuracy 71.15%)
     * Monte Carlo Independent - Random baseline, data-independent splits (directional accuracy 67.31%)
 
-<img width="3262" height="2989" alt="PURGE WF-CV_SMALL_GIT_" src="https://github.com/user-attachments/assets/fdf42ec3-6633-4139-9aee-fd4183dfdfaf" />
+<img width="3272" height="2986" alt="PURGE WF-CV_SMALL_GIT_" src="https://github.com/user-attachments/assets/9aefe930-da35-49b3-b5c7-61bb6ea3dc4c" />
 
 ### For different forecast horizons: 
 5, 20, 45 days
