@@ -50,7 +50,7 @@ Dmitry Kandrykinski
 
    GitHub: @Swimmov
 
-   LinkedIn: src="https://www.linkedin.com/in/dmitry-kin/"
+   LinkedIn: <src="https://www.linkedin.com/in/dmitry-kin/"/>
    
    Email: d.kandrykinski@gmail.com
 
