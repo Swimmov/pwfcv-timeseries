@@ -45,9 +45,12 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ### Contact
 Author
+
 Dmitry Kandrykinski
 
    GitHub: @Swimmov
-   LinkedIn: Your LinkedIn
+
+   LinkedIn: [Your LinkedIn](https://www.linkedin.com/in/dmitry-kin/)
+   
    Email: d.kandrykinski@gmail.com
 
