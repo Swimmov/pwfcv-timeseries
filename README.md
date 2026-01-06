@@ -1,5 +1,5 @@
 # <span style="color:red"> PWFCV-TimeSeries
-A production-ready LSTM framework validated on stock price forecasting, applicable to sales prediction, demand forecasting, customer traffic, and any sequential business data.
+A Time Swries LSTM framework validated on stock price forecasting, applicable to sales prediction, demand forecasting, customer traffic, and any sequential business data.
 ### Rigorous time series forecasting with 5 purged cross-validation methods
 
 ## Methodology: 5 Purged CV Methods Compared
