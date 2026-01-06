@@ -19,7 +19,7 @@ A production-ready LSTM framework validated on stock price forecasting, applicab
 ### And randemly selected other parametres:
 train_window, number of folds, loss_function ('mse' or custom_directional_losses)
 
-### 70+ technical, statistical, and domain-specific indicators with adaptive selection logic based on forecust horizon
+### 70+ technical, statistical, and domain-specific indicators with adaptive selection logic based on forecast horizon
 
 ## Methodology Highlights
 ### Practices Applied:
