@@ -1,0 +1,89 @@
+
+================================================================================================================================================================
+FORECAST HORIZON: 5d; Time Step = 30
+================================================================================================================================================================
+
+Technique          Train    Folds  Dir     Direction     Mag       First Prediction                       Full Test Set                         
+             Window(or min)        Acc    T/P/✓✗      Ratio       MAE / MAPE / RMSE                      MAE / MAPE / RMSE               loss      
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Sliding CV         913     5      57.32%  UP/UP ✓       0.25    $  25.88 /  0.70% / $  32.77           $  61.41 /  1.33% / $  87.33   custom_directional_losses_weighted
+Sliding CV         754     6      52.72%  UP/UP ✓       0.14    $  14.97 /  0.40% / $  20.05           $  62.53 /  1.35% / $  88.67   custom_directional_losses_weighted
+Expanding CV       800     13     51.46%  UP/UP ✓       0.36    $  29.58 /  0.80% / $  36.44           $  64.31 /  1.38% / $  91.08   mse
+Expanding CV       800     13     55.65%  UP/UP ✓       0.14    $  17.96 /  0.48% / $  21.81           $  61.68 /  1.33% / $  87.33   custom_directional_losses_clip_weighted
+Nested CV          500     20     49.79%  UP/UP ✓       0.45    $  25.54 /  0.69% / $  31.84           $  66.84 /  1.43% / $  94.13   custom_directional_losses_weighted
+Nested CV          500     20     48.95%  UP/UP ✓       0.35    $  59.68 /  1.60% / $  65.16           $  69.59 /  1.50% / $  99.07   custom_directional_losses_weighted
+MC INDEPENDENT  min 1000   5      59.83%  UP/UP ✓       0.25    $  26.38 /  0.71% / $  32.53           $  60.94 /  1.32% / $  87.55   mse               
+MC INDEPENDENT  min 500    5      50.21%  UP/UP ✓       0.40    $  32.96 /  0.89% / $  40.83           $  65.94 /  1.41% / $  93.46   custom_directional_losses_clip_weighted
+MC SORTED       min 700    10     49.79%  UP/UP ✓       0.46    $  22.13 /  0.60% / $  22.17           $  68.82 /  1.48% / $  97.27   mse
+MC SORTED       min 700    11     54.81%  UP/UP ✓       0.11    $  18.24 /  0.49% / $  21.92           $  61.55 /  1.33% / $  87.14   custom_directional_losses_clip_weighted
+
+SUMMARY:
+  • First Prediction Direction Correct: 5/5 (100.0%)
+  • Best Direction Accuracy: Monte Carlo INDEPENDENT 59.83%
+  • Avg Magnitude Ratio: 0.29
+  • Best First Prediction MAE: Sliding CV $14.97
+  • Best Full Test MAE: Sliding CV $61.41
+
+=====================================================================================================================================================================
+FORECAST HORIZON: 20d; Time Step = 80
+=====================================================================================================================================================================
+
+Technique          Train   Folds  Dir     Direction     Mag    First Prediction                       Full Test Set                         
+                   Window         Acc     T/P/✓✗        Ratio  MAE / MAPE / RMSE                      MAE / MAPE / RMSE                 loss    
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Sliding CV         1066    4      64.41%  UP/UP ✓       0.21    $  48.45 /  1.27% / $  57.64           $ 115.64 /  2.49% / $ 158.71   custom_directional_losses_weighted
+Sliding CV         826     5      69.49%  UP/UP ✓       0.37    $  46.22 /  1.21% / $  54.31           $ 113.17 /  2.44% / $ 158.25   custom_directional_losses_weighted
+Expanding CV       1100    9      69.49%  UP/UP ✓       0.27    $  44.88 /  1.18% / $  52.89           $ 114.55 /  2.47% / $ 157.74   custom_directional_losses_clip_weighted
+Expanding CV       1100    9      61.02%  UP/UP ✓       0.38    $  45.99 /  1.21% / $  54.72           $ 116.36 /  2.50% / $ 159.91   mse    
+Nested CV          1100    5      66.1%   UP/UP ✓       0.32    $  45.15 /  1.18% / $  53.35           $ 115.38 /  2.49% / $ 159.74   custom_directional_losses_weighted       
+Nested CV          1100    5      69.49%  UP/UP ✓       0.31    $  47.78 /  1.25% / $  56.72           $ 116.96 /  2.52% / $ 161.41   custom_directional_losses_weighted
+MC INDEPENDENT  min 1000   3x5    61.02%  UP/UP ✓       0.51    $  38.26 /  1.00% / $  44.80           $ 125.05 /  2.69% / $ 172.04   custom_directional_losses_clip_weighted      
+MC INDEPENDENT  min 1000   5x5    55.93%  UP/UP ✓       0.25    $  46.73 /  1.22% / $  55.48           $ 116.63 /  2.50% / $ 158.88   mse
+MC SORTED       min 1000   9      69.49%   UP/UP ✓      0.29    $  42.76 /  1.12% / $  49.83           $ 114.05 /  2.45% / $ 158.60   custom_directional_losses_clip_weighted     
+MC SORTED       min 1000   11     59.32%  UP/UP ✓       0.46    $  33.75 /  0.89% / $  38.57           $ 117.49 /  2.53% / $ 163.26   mse
+
+SUMMARY:
+  • First Prediction Direction Correct: 9/9 (100.0%)
+  • Best Direction Accuracy: Multiple 69.49%
+  • Avg Magnitude Ratio: 0.34
+  • Best First Prediction MAE: Monte Carlo SORTED $33.75
+  • Best Full Test MAE: Sliding CV $113.17
+
+=====================================================================================================================================================================
+FORECAST HORIZON: 45d; Time Step = 180
+=====================================================================================================================================================================
+
+Technique          Train   Folds  Dir     Direction      Mag       First Prediction                       Full Test Set                         
+                   Window         Acc     T/P/✓✗        Ratio     MAE / MAPE / RMSE                      MAE / MAPE / RMSE              loss       
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Sliding CV         1302    3      76.92%  UP/UP ✓       0.44    $  58.34 /  1.51% / $  67.92           $ 177.74 /  3.85% / $ 249.82   custom_directional_losses_weighted
+Sliding CV         904     4      76.92%  UP/UP ✓       0.41    $  60.03 /  1.55% / $  72.14           $ 176.41 /  3.82% / $ 245.57   custom_directional_losses_weighted
+Expanding CV       1500    5      76.92%  UP/UP ✓       0.32    $  59.34 /  1.53% / $  71.37           $ 179.44 /  3.86% / $ 248.03   custom_directional_losses_clip_weighted
+Expanding CV       1500    5      69.23%  UP/UP ✓       0.30    $  68.71 /  1.78% / $  82.19           $ 182.22 /  3.90% / $ 252.64   mse
+Nested CV          1500    7      76.92%  UP/UP ✓       0.32    $  71.63 /  1.85% / $  86.27           $ 175.73 /  3.79% / $ 242.24   custom_directional_losses_weighted
+Nested CV          800     8      80.77%  UP/UP ✓       0.19    $  79.78 /  2.06% / $  95.32           $ 181.35 /  3.90% / $ 245.70   custom_directional_losses_weighted
+MC INDEPENDENT  min 1000   3x5    76.92%  UP/UP ✓       0.47    $  51.76 /  1.34% / $  60.94           $ 179.52 /  3.89% / $ 250.09   custom_directional_losses_clip_weighted     
+MC INDEPENDENT  min 1400   5x5    76.92%  UP/UP ✓       0.27    $  66.65 /  1.72% / $  79.42           $ 183.37 /  3.95% / $ 251.27   mse
+MC SORTED       min 1400   9      76.92%  UP/UP ✓       0.57    $ 173.56 /  4.48% / $ 223.52           $ 181.14 /  3.96% / $ 250.13   custom_directional_losses_clip_weighted  
+MC SORTED       min 1400   6      76.92%  UP/UP ✓       0.36    $  73.32 /  1.89% / $  87.87           $ 178.73 /  3.86% / $ 248.00   mse         
+                  
+
+SUMMARY:
+  • First Prediction Direction Correct: 10/10 (100.0%)
+  • Best Direction Accuracy: Nested CV 80.77%
+  • Avg Magnitude Ratio: 0.37
+  • Best First Prediction MAE: Monte Carlo INDEPENDENT $51.76
+  • Best Full Test MAE: Nested CV $175.73
+
+=====================================================================================================================================================================
+NOTES:
+=====================================================================================================================================================================
+  • Train Window: Days used for training (MC = Monte Carlo with variable windows)
+  • Dir Acc: Overall directional accuracy across all predictions
+  • Direction (T/P/✓✗): True/Predicted direction for first prediction, with correctness
+  • Mag Ratio: Predicted/Actual magnitude ratio (1.0 = perfect prediction)
+  • First Prediction: Metrics for initial test set prediction
+  • Full Test Set: Rolling evaluation across entire test period
+=====================================================================================================================================================================
+
+custom directional losses
