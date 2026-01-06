@@ -1,6 +1,13 @@
 # <span style="color:red"> PWFCV-TimeSeries
 A Time Swries LSTM framework validated on stock price forecasting, applicable to sales prediction, demand forecasting, customer traffic, and any sequential business data.
-### Rigorous time series forecasting with 5 purged cross-validation methods
+
+    • Stock marcket assets: S&P 500 Index
+    • Date range: 01-01-2000 // 12-31-2024     
+    • Data source: FRED API, yahoo finance    
+    • Total features generated: 72
+    • 'target': Daily close price percentage returns
+    
+### Time Series forecasting with 5 purged cross-validation methods
 
 ## Methodology: 5 Purged CV Methods Compared
 ### Systematically evaluated 5 walk-forward cross-validation strategies following López de Prado methodology:
@@ -16,7 +23,7 @@ A Time Swries LSTM framework validated on stock price forecasting, applicable to
 ### For different forecast horizons: 
 5, 20, 45 days
 
-### And randemly selected other parametres:
+### And randomly selected other parameters:
 train_window, number of folds, loss_function ('mse' or custom_directional_losses)
 
 ### 70+ eatures of technical indicators (SMA, EMA, RSI, MACD, Bollinger Bands), macro signals (VIX, interest rates), regime detection, and economic calendar events with adaptive selection logic based on forecast horizon
